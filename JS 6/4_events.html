@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+   #btn-event-helper{
+    height: 100px;
+    width: 100px;
+    border: 2px solid red;
+   } 
+</style>
+<body>
+    <h2>Events</h2>
+    <!-- 
+    Mouse : click, hover, scroll, right click , left click, dbclick
+    Keyboard : keypress
+    Touch  : 
+    -->
+
+    <div id="btn-event-helper"></div>
+
+    <button id="btn-events">Change BG
+    </button>
+    <h2>Keyboard Events</h2>
+    <input type="text">
+    <p></p>
+
+    <script>
+  let button =document.querySelector("#btn-events");
+   button.addEventListener("mouseenter",function(){
+    let div=document.querySelector("#btn-event-helper");
+    div.style.backgroundColor="lightblue";
+});
+   button.addEventListener("mouseleave",function(){
+    let div=document.querySelector("#btn-event-helper");
+    div.style.backgroundColor="transparent";
+});
+let input=document.querySelector("input");
+let str="";
+input.addEventListener("keydown",function(e){
+console.log("event object",e.key);
+let p=document.querySelector("p");
+str=str+e.key;
+p.textContent=str;
+})
+
+
+    </script>
+
+</body>
+</html>
