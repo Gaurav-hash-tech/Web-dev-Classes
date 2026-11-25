@@ -7,6 +7,7 @@ let inputTwoEle= document.getElementById("inputTwo");
 let outputEle= document.getElementById("output");
 let calculateEle= document.getElementById("calculate");
 let operator = "";
+
 addEle.addEventListener("click", function() {
     operator = "+";
     outputEle.textContent = "Operator: +";
